@@ -1,0 +1,94 @@
+/**
+   COP2253 Java programming
+   This program takes input from a user; such as, product name, unit price, and quantity.
+   The data is formatted into a table to be printed on the console along with
+   a total price for the entire quantity of each product.
+   totalCost = unitPrice * quantity
+   
+   @author lwilliams
+   @version 1.0
+   
+   COP2253 project 2
+   filename: Product.java
+*/
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Product
+{
+	   	String productName;
+   		int quantity;
+   		double unitPrice;
+   		double totalCost;
+
+	public Product (String name, int quantity, double price)
+	{
+		this->productName = name;
+		this->quantity = quantity;
+		this->price = unitPrice;
+	}
+
+	public String getName()
+	{
+		String firstChar = Character.toString(productName.charAt(0);	//	stores first character of product name to a string
+		String subName = productName.subString(1);	//	stores the remaining characters of product name to a string
+
+		productName = firstChar.toUpperCase() + subName.toLowerCase();	//	formats product name
+		return productName;
+	}
+
+	public int getQuantity()
+	{
+		return quantity;
+	}
+
+	public double getPrice()
+	{
+		return unitPrice;
+	}
+
+	public void calculateTotalCost (int quantity, double price)
+	{
+		this->totalCost = price * quantity;
+	}
+
+	public double getTotalCost()
+	{
+		return totalCost;
+	}
+
+	public void printProductData()
+	{
+		System.out.printf("%15s", "|Product:", "|");
+		System.out.println()
+
+	}
+
+   public static void main(String [] args)
+   {
+   		String name;
+   		int quantity;
+   		double price;
+
+   		Scanner input = new Scanner(System.in);	//	Scanner method for extracting user input
+
+   		List<Product> productList = new ArrayList<Product>();	//	creates a list of product objects
+   		int productNum = 1;	//	variable to control the iterations of the loop
+   		do
+   		{
+   			System.out.println ("Please provide the following information for product " + productNum + ": ");
+	   		System.out.print ("Product name: ");
+	   		input.next(name);
+	   		System.out.print ("\nProduct quantity: ");
+	   		input.nextInt(quantity);
+	   		System.out.print ("\nProduct unit price: ");
+	   		input.nextDouble(price);
+
+	   		productList.add(new Product(name, quantity, price));	//	adds a new product to the product list with user input
+
+   		}while (productNum < 3)	//	set up for only inputing 2 products
+
+
+
+   }
