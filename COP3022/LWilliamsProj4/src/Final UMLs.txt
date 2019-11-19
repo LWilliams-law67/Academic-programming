@@ -1,0 +1,55 @@
+﻿Admin
+- selection : int
+- outFS : PrintWriter
+- scnr : Scanner
+- currGame : TriviaGame
++ Admin(Scanner, TriviaGame)
++ menu() : void
++ listQuestion() : void
++ addQuestion() : void
++ checkValue() : void
++ deleteQuestion(TriviaGame) : void
++ findQuestion(String, TriviaGame) : Question
+
+Player
+- name : String
+- gamertag : String
+- score : int
+- outFile : FileOutputStream
+- outFS : PrintWriter
+- openFile(File) : void
+- readPlayerFile(Scanner) : void
++ Player(File, String, String)
++ Player(File, Scanner)
++ closeFile() : void
++ addScore(int) : void
++ savePlayerFile() : void
++ Getters and Setters
+
+Question
+- activated : boolean
+- questionID : String
+- question : String
+- answer : String
+- value : int
++ Question(String, String, String, String, int)
++ Getters and Setters
+
+InvalidValueException
+- message : String
++ InvalidValueException(String)
++ message() : String
+
+TriviaGame
+- gameQuestions : ArrayList<Question>
+- fs : FileInputStream
+- qFS : Scanner
+- currQuestionIndex : int
+- currPlayer : Player
+- currGameScore : int
++ TriviaGame(Player)
++ loadQuestions() : void
++ getNextIndex() : int
++ play(Scanner) : void
++ compareAnswer(Question, String) : boolean
+

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"MyMathClass","l":"average(ArrayList<T>)","url":"average(java.util.ArrayList)"},{"p":"<Unnamed>","c":"MyMathClass","l":"MyMathClass()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"MyMathClass","l":"standardDeviation(ArrayList<T>)","url":"standardDeviation(java.util.ArrayList)"}]

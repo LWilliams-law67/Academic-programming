@@ -1,0 +1,22 @@
+2
+G
+Anthony Pinto, AC Read
+Solutia,75,10/23/2013,70.5,113
+ACRead,82,01/21/2014,68.5,123
+3
+B
+Joe Johnson, Jennies Pizza
+Felton Lanes,112,09/22/2012
+Bowlarama,142,09/24/2012
+Cordova Lanes,203,09/24/2012
+2
+G
+Tiger Woods, Isleworth
+Augusta,68,04/08/2013,76.2,135
+Bethpage Black,71,06/21/2012,76.6,144
+3
+B
+Earl Anthony , Nine Mile Denny's
+Firestone Lanes,223,09/22/1968
+Bowlarama,246,09/24/1976
+Cordova Lanes,210,09/24/1977
