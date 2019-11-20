@@ -1,0 +1,47 @@
+﻿WelcomePanel extends JPanel
+- shopName : String
+- welcomeLabel : JLabel
++ WelcomePanel()
+
+BreadPanel extends JPanel
+- breadTypes : ArrayList<String>
+- buttonGroup: ButtonGroup
+- cost : double
++ BreadPanel()
++ getCost() : double
++ setCost(double) : void
+
+ToppingsPanel extends JPanel
+- toppings : ArrayList<String>
+- cost : double
++ ToppingsPanel()
++ getCost() : double
++ setCost(double) : void
+
+DrinkPanel extends Jpanel
+- buttonGroup: ButtonGroup
+- drinks : ArrayList<String>
+- cost : double
++ DrinkPanel()
++ getCost() : double
++ setCost(double) : void
+
+OrderCalc extends JFrame
+- welcome : WelcomePanel
+- bread : BreadPanel
+- toppings : ToppingsPanel
+- drink : DrinkPanel
+- buttonPanel : JPanel
+- calculate : JButton
+- exit : Jbutton
+- orderAmount : double
+- taxAmount : double
+- CalculateListener : class implements ActionListener
+- ExitListener : class implements ActionListener
++ OderCalc()
++ getOrderAmount() : double
++ getTaxAmount() : double
++ setOrderAmount(double) : void
++ setTaxAmount(double) : void
++ calculateTaxAmount() : double
+

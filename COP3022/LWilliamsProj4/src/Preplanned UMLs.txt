@@ -1,0 +1,43 @@
+﻿Admin
+- questionBank : ArrayList<Question>
+- questionFile : File
+- outFile : FileOutputStream
+- outFS : PrintWriter
+- inFile : FileInputStream
+- scnrFS : Scanner
++ listQuestions() : void
++ addQuestion() : void
++ deleteQuestion() : void
++ findQuestion() : Question
++ adminMenu() : void
+									
+Question
+- activated : boolean
+- questionID : String
+- question : String
+- answer : String
+- value : int
++ Question(boolean, String, String, String, int)
++ Getters and Setters
+
+Player
+- name : String
+- gamertag : String
+- totalScore : int
+- outFile : FileOutputStream
+- outFS : PrintWriter
++ Player(String, String)
++ getters and setters
+
+
+TriviaGame
+- questions : ArrayList<Question>
+- scnrFS : Scanner
+- inFile : FileInputStream
+- currScore : int
++ TriviaGame(Player)
++ loadQuestions() : void
++ getNextQuestion : Question
++ compareAnswer(Question, Strng) : boolean
++ play() : void
+
