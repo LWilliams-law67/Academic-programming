@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  h1 Wesley's Hot Wieners in Buns
+  h4 "Hottest wieners in the South!" - Forbes Magazine
+  h4 "These wieners will leave your mouth satisfied" - New York Times
+  h4 "Dissatisfied with your wiener experience in the past? Give Wesley's a try!" - TIME Magazine
+
+  form(action="/user" method="get")
+    fieldset
+      legend Login
+      .form-group
+          label(for="username") Username:
+          input#username.form-control(type='text' name='username')
+
+      .form-group
+          label(for="password") Password:
+          input#password.form-control(type='text' name='password')
+
+  
+      .form-group
+                    label(for='login') &nbsp;
+                    input#submit(type='submit' name='login' value='login')
+
+

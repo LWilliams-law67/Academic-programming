@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Your Search Results:
+  h10 Filter by year: 
+  a(href=('/results?input=' + input + '&Start=' + 1950 + '&End=' + 1959)) 1950s  
+  a(href=('/results?input=' + input + '&Start=' + 1960 + '&End=' + 1969)) 1960s  
+  a(href=('/results?input=' + input + '&Start=' + 1970 + '&End=' + 1979)) 1970s  
+  a(href=('/results?input=' + input + '&Start=' + 1980 + '&End=' + 1989)) 1980s  
+  a(href=('/results?input=' + input + '&Start=' + 1990 + '&End=' + 1999)) 1990s  
+  a(href=('/results?input=' + input + '&Start=' + 2000 + '&End=' + 2009)) 2000s  
+  a(href=('/results?input=' + input + '&Start=' + 2010 + '&End=' + 2019)) 2010s  
+  a(href=('/results')) Clear Filter  
+
+  if shows
+    ul
+      each s in shows
+        li
+          if s.show.premiered != null
+            a(href=('/details?id=' + s.show.id)) #{s.show.name}(#{s.show.premiered.slice(0,4)})
+          else
+            a(href=('/details?id=' + s.show.id)) #{s.show.name}(unknown)
+        //- if s.show.image.medium != null
+          li #{s.show.image.medium} #{s.show.name}
+        //- else
+          li #{s.show.name}
+
+  h3 Search for a show:
+  form(action="/results" method="get")
+    input(name="input" type="text")
+    input(type="submit")

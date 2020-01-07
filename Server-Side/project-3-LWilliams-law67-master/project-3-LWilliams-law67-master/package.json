@@ -1,0 +1,23 @@
+{
+  "name": "zipcode-api",
+  "version": "1.0.0",
+  "description": "Project 3.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "live": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Williams",
+  "license": "ISC",
+  "dependencies": {
+    "apikey": "^0.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.11",
+    "zipcodes": "^8.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.4"
+  }
+}

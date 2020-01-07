@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Show Details:
+  ul
+    each detail in show
+      if detail != null
+        li #{detail}
+  
+    
+  a(href='/') Home page
+  h3 Search for a show:
+  form(action="/results" method="get")
+    input(name="input" type="text")
+    input(type="submit")

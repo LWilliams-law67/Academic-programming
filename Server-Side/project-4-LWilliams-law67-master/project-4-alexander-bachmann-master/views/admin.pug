@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 Administrative Actions
+
+  h4 Add new menu item
+
+  form(action="/admin/add" method="get")
+      fieldset
+      .form-group
+          label(for="itemName") Item name
+          input#itemName.form-control(type='text' name='itemName')
+
+      .form-group
+          label(for="price") Price
+          input#price.form-control(type='text' name='price')
+
+      .form-group
+                      label(for='newItem') &nbsp;
+                      input#submit(type='submit' name='newItem' value='Add')
+
+
+  h4 Remove current menu item
+    each item in inventory
+      ul
+        h5 #{item.name} - $#{item.price}
+        a(href='/admin/remove/' + item.name + '/' + item.price) Remove
+        
+
+  h4 Total Sales: $#{total}
+
+  if users
+    h4 Recent Users: 
+
+    each name in users
+        li= name
+
+  a(href='/') Log out
+    

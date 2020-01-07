@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapline}
+  .row
+    .col-12.col-md-8
+        if soda.quantity
+          h4 Be careful not to drink too much caffeine!
+          small #{soda.quantity} remaining
+          p.cost Purchase price: $#{soda.cost.toFixed(2)}
+
+    .col-12.col-md-4
+      p.lead= sidebar

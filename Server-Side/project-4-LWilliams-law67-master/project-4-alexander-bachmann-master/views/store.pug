@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  h1 Wesley's Hot Wieners in Buns
+  h2 Wieners in and around your mouth since 1904
+
+  h3 Menu
+  if inventory
+    ul
+      each item in inventory
+        h5 #{item.name} - $#{item.price}
+        a(href='/cart/add/' + item.name + '/' + item.price) add to cart
+
+  if total != 0
+    h3 Cart
+    if cart
+      ul
+        each item in cart
+          h5 #{item.itemName} - $#{item.itemPrice}
+          a(href='/cart/remove/' + item.itemName + '/' + item.itemPrice) remove
+  
+    h5 Total: $#{total}
+    
+
+  form(action="/checkout" method="get")
+    fieldset
+      legend Checkout
+      .form-group
+          label(for="name") Name
+          input#name.form-control(type='text' name='name')
+
+      .form-group
+          label(for="address") Address
+          input#address.form-control(type='text' name='address')
+
+      .form-group
+          label(for="creditCardNumber") Credit card number
+          input#creditCardNumber.form-control(type='text' name='creditCardNumber')
+
+      .form-group
+                    label(for='checkout') &nbsp;
+                    input#submit(type='submit' name='checkout' value='checkout')
+
+

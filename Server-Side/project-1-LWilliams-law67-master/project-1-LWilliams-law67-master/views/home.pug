@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Welcome to Television Guru!
+  h3 Search for a show:
+  form(action="/results" method="get")
+    input(name="input" type="text")
+    input(type="submit")
+

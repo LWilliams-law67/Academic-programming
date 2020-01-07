@@ -1,0 +1,21 @@
+{
+  "name": "television_guru",
+  "version": "1.0.0",
+  "description": "This application searches the tvMaze API and returns television search query results.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "live": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Williams",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "pug": "~2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

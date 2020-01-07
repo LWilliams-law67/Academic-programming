@@ -1,0 +1,24 @@
+{
+  "name": "hot-weiners-n-buns",
+  "version": "1.0.0",
+  "description": "This application involves an admin role to provide menu items and a user role to purchase those items.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "live": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Bachmann & Luke Williams",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13",
+    "passport": "^0.4.0",
+    "pug": "~2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3",
+    "morgan": "^1.9.1"
+  }
+}

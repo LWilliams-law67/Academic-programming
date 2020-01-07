@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    .container
+        if flash
+            .alert.alert-primary=flash.message
+
+        h1 People for Spreading Pet Cuteness in America (PSPCA)
+
+        p Click on the link for the animal you think is cutest. Only one vote per person, please!
+
+        h3
+            a(href="/vote/toby") Vote for Toby
+        img(src="img/cute-cat.jpg" alt="Cute Cat")
+        p
+            strong Total votes: #{votes.toby.length}
+
+        h3
+            a(href="/vote/scout") Vote for Scout
+        img(src="img/cute-dog.jpg" alt="Cute Dog")
+        p
+            strong Total votes: #{votes.scout.length}
+
+        hr
+
+        h2 Donate to the PSPCA
+
+        .card
+            .card-body
+                h5 Your donations
+                if cartItems.length
+                    a(href="/donate/process") Check out now
+                    ul.list-group
+                    each item in cartItems
+                        li.list-group-item $#{item.amount} - #{item.message}
+                else
+                    p You don't have any donations in your cart yet.
+
+
+        form(action="/donate" method="get")
+            fieldset
+                legend Donation Form
+                .form-group
+                    label(for='amount') Amount
+                    input.form-control#amount(type='text' name='amount')
+                .form-group
+                    label(for='message') Donation Message
+                    input.form-control#message(type='text' name='message')
+                .form-group
+                    label(for='submit') &nbsp;
+                    input#submit(type='submit' name='submit' value='Submit')
+
